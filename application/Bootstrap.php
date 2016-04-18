@@ -86,11 +86,11 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
         $route = new Yaf_Route_Simple("m", "c", "a");
         $router->addRoute("name", $route);
 
-        $router->addRoute('default', new Yaf_Route_Regex('#^/([a-zA-Z]+)-([a-zA-Z]+).html$#',
+        $router->addRoute('default', new Yaf_Route_Regex('#^/([a-zA-Z]+)/([a-zA-Z]+).html$#',
             array('controller' => ':controller', 'action' => ':action'),
             array(1 => 'controller', 2 => 'action')
         ));
-        $router->addRoute('admin', new Yaf_Route_Regex('#^/admin/([a-zA-Z]+)-([a-zA-Z]+)/$#',
+        $router->addRoute('admin', new Yaf_Route_Regex('#^/admin/([a-zA-Z]+)/([a-zA-Z]+)/$#',
             array('module'=>'ADMIN','controller' => ':controller', 'action' => ':action'),
             array(1 => 'controller', 2 => 'action')
         ));
