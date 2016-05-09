@@ -105,6 +105,7 @@ DROP TABLE IF EXISTS `ac_user`;
 CREATE TABLE `ac_user` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户编号',
   `loginname` varchar(20) NOT NULL COMMENT '登录名称',
+  `password` char(32) DEFAULT '' COMMENT '密码',
   `fullname` varchar(40) DEFAULT '' COMMENT '真实姓名',
   `phone` varchar(16) DEFAULT NULL COMMENT '手机',
   `disabled` tinyint(1) DEFAULT NULL COMMENT '0：正常，1；已禁用',
@@ -114,7 +115,7 @@ CREATE TABLE `ac_user` (
   KEY `phone` (`phone`),
   KEY `disabled` (`disabled`),
   KEY `groupid` (`groupid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Table structure for table `ac_user_group` */
 
@@ -125,7 +126,7 @@ CREATE TABLE `ac_user_group` (
   `groupname` varchar(200) NOT NULL COMMENT '分组名称',
   `disabled` tinyint(1) DEFAULT NULL COMMENT '状态 0:正常，1：禁用',
   PRIMARY KEY (`groupid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
