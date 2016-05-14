@@ -21,6 +21,7 @@ class Admin_LoginModel extends Admin_BaseModel
             ':loginname' => $username, ':password' => $password
         ));
         $result = $query->execute()->current();
+
         if (empty($result)) {
             return 0;
         } else {

@@ -7,10 +7,10 @@
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../yaf.auto.complete-master" />
+          <root url="file://$MODULE_DIR$/../yaf.auto.complete-master" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/../../yaf.auto.complete-master" />
+          <root url="file://$MODULE_DIR$/../yaf.auto.complete-master" />
         </SOURCES>
       </library>
     </orderEntry>

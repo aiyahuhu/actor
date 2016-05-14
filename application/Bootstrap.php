@@ -34,7 +34,7 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
          * Attach the file write to logging. Multiple writers are supported.
          */
 
-//        Kohana_Exception::$log->attach(new Log_File(APPPATH.'/logs'));
+        Kohana_Exception::$log->attach(new Log_File(APPPATH.'/logs'));
 
 
         define('TIME_FORMAT', 'Y-m-d H:i:s');//时间格式
